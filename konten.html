@@ -163,13 +163,17 @@
                                         <th class="px-4 py-3">Gambar</th>
                                         <th class="px-4 py-3">Actions</th>
                                     </tr>
+                                    <button onclick="showCreateForm()" class="flex items-center justify-between px-2 py-2 text-sm font-medium leading-5 text-white rounded-lg bg-blue-500 " aria-label="Edit">
+                                     Tambah Data
+                                    </button>  
+                                    <br>
                                 </thead>
                                 <tbody class="bg-white divide-y dark:divide-gray-700 dark:bg-gray-800" id="kontenBody">
                                     <!-- Data akan ditambahkan di sini oleh JavaScript -->
                                 </tbody>
                             </table>
                         </div>
-                      
+
                     </div>
                 </div>
             </main>
@@ -178,35 +182,86 @@
 
 
     <!-- Edit -->
-    <div id="editFormContainer" class="fixed inset-0 z-50 overflow-auto bg-gray-800 bg-opacity-50 flex justify-center items-center hidden">
+    <div id="editFormContainer"
+        class="fixed justify-self-center  inset-0 z-50 overflow-auto  flex content-center justify-center items-center hidden">
         <form id="editForm" class="bg-white shadow-md rounded-lg px-4 pt-6 pb-8 mb-4 w-full max-w-lg">
             <input type="hidden" id="editId" name="editId">
             <div class="mb-4">
                 <label for="editTitle" class="block text-gray-700 text-sm font-bold mb-2">Title:</label>
-                <input type="text" id="editTitle" name="editTitle" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <input type="text" id="editTitle" name="editTitle"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
             <div class="mb-4">
                 <label for="editDeskripsi" class="block text-gray-700 text-sm font-bold mb-2">Deskripsi:</label>
-                <textarea id="editDeskripsi" name="editDeskripsi" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" rows="3"></textarea>
+                <textarea id="editDeskripsi" name="editDeskripsi"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    rows="3"></textarea>
             </div>
             <div class="mb-4">
-                <label for="editKategoriKonten" class="block text-gray-700 text-sm font-bold mb-2">Kategori Konten:</label>
-                <input type="text" id="editKategoriKonten" name="editKategoriKonten" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <label for="editKategoriKonten" class="block text-gray-700 text-sm font-bold mb-2">Kategori
+                    Konten:</label>
+                <input type="text" id="editKategoriKonten" name="editKategoriKonten"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
             </div>
             <div class="mb-4">
                 <label for="editGambarKonten" class="block text-gray-700 text-sm font-bold mb-2">Gambar Konten:</label>
-                <input type="file" id="editGambarKonten" name="editGambarKonten" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
-                <span id="filenameDisplay" class="text-gray-600">Pilih gambar...</span> <!-- Menampilkan nama file atau placeholder -->
+                <input type="file" id="editGambarKonten" name="editGambarKonten"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <span id="filenameDisplay" class="text-gray-600">Pilih gambar...</span>
+                <!-- Menampilkan nama file atau placeholder -->
             </div>
             <div class="flex items-center justify-between">
-                <button type="submit" class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Update Konten</button>
-                <button type="button" onclick="hideEditForm()" class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Cancel</button>
+                <button type="submit"
+                    class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Update
+                    Konten</button>
+                <button type="button" onclick="hideEditForm()"
+                    class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Cancel</button>
             </div>
         </form>
     </div>
-    
-    
-<script src="./assetss/js/admin.js"></script>
+
+    <!-- Create -->
+    <div id="createFormContainer"
+        class="fixed justify-self-center  inset-0 z-50 overflow-auto  flex content-center justify-center items-center hidden">
+        <form id="createForm" class="bg-white shadow-md rounded-lg px-4 pt-6 pb-8 mb-4 w-full max-w-lg">
+            <div class="mb-4">
+                <label for="createTitle" class="block text-gray-700 text-sm font-bold mb-2">Title:</label>
+                <input type="text" id="createTitle" name="createTitle"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-4">
+                <label for="createDeskripsi" class="block text-gray-700 text-sm font-bold mb-2">Deskripsi:</label>
+                <textarea id="createDeskripsi" name="createDeskripsi"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                    rows="3"></textarea>
+            </div>
+            <div class="mb-4">
+                <label for="createKategoriKonten" class="block text-gray-700 text-sm font-bold mb-2">Kategori
+                    Konten:</label>
+                <input type="text" id="createKategoriKonten" name="createKategoriKonten"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+            </div>
+            <div class="mb-4">
+                <label for="createGambarKonten" class="block text-gray-700 text-sm font-bold mb-2">Gambar
+                    Konten:</label>
+                <input type="file" id="createGambarKonten" name="createGambarKonten"
+                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                <span id="filenameDisplay" class="text-gray-600">Pilih gambar...</span>
+                <!-- Menampilkan nama file atau placeholder -->
+            </div>
+            <div class="flex items-center justify-between">
+                <button type="submit"
+                    class="bg-purple-500 hover:bg-purple-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Create
+                    Konten</button>
+                <button type="button" onclick="hideCreateForm()"
+                    class="bg-gray-500 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Cancel</button>
+            </div>
+        </form>
+    </div>
+
+
+
+    <script src="./assetss/js/admin.js"></script>
 </body>
 
 </html>
