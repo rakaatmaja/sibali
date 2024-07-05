@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Detail Konten</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="assetss/css/bootstrap.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Belgrano|Courgette&subset=latin,latin-ext' rel='stylesheet'
+        type='text/css'>
+    <link href="assetss/css/bootshape.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">SiBali</a>
+            </div>
+            <nav role="navigation" class="collapse navbar-collapse navbar-right">
+                <ul class="navbar-nav nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="#">Destinations</a></li>
+                    <li><a href="#">License</a></li>
+                    <li><a href="#">Contacts</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!-- End Navigation bar -->
+
+    <!-- Konten Detail -->
+    <div class="container" id="detail-container">
+        <!-- Konten detail akan dimuat di sini -->
+    </div>
+
+
+
+    <!-- Form Komentar -->
+    <div class="container" id="comment-form-container">
+        <h3>Leave a Comment</h3>
+        <form id="comment-form">
+            <div class="form-group">
+                <label for="comment-content">Comment</label>
+                <textarea class="form-control" id="comment-content" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </div>
+
+    <!-- Daftar Komentar -->
+    <div class="container" id="comments-container">
+        <h3>Comments</h3>
+        <div id="comments-list">
+            <!-- Komentar akan dimuat di sini -->
+        </div>
+    </div>
+
+    <!-- Form Edit Komentar -->
+    <div class="container" id="edit-comment-form-container" style="display: none;">
+        <h3>Edit Comment</h3>
+        <form id="edit-comment-form">
+            <div class="form-group">
+                <label for="edit-comment-content">Edit Comment</label>
+                <textarea class="form-control" id="edit-comment-content" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Update</button>
+        </form>
+    </div>
+
+
+    <!-- Footer -->
+    <div class="footer text-center">
+        <p>&copy; 2024 SiBali. All Rights Reserved. Proudly created by Raka & Andika</a>
+        </p>
+    </div><!-- End Footer -->
+
+    <script src="assetss/js/jquery.js"></script>
+    <script src="assetss/js/bootstrap.min.js"></script>
+    <script src="assetss/js/bootshape.js"></script>
+    <script src="assetss/js/detail.js"></script>
+</body>
+
+</html>

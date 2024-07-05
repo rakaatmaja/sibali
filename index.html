@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Yacht Club</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="assetss/css/bootstrap.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Belgrano|Courgette&subset=latin,latin-ext' rel='stylesheet'
+    type='text/css'>
+  <link href="assetss/css/bootshape.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Navigation bar -->
+  <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">SiBali</a>
+      </div>
+      <nav role="navigation" class="collapse navbar-collapse navbar-right">
+        <ul class="navbar-nav nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li class="dropdown" id="userDropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <span id="loggedInUser">Welcome</span> <b class="caret"></b>
+            </a>
+            <ul class="dropdown-menu">
+              <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+          </li>
+
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Slide gallery -->
+  <div class="jumbotron">
+    <div class="container">
+      <div class="col-xs-12">
+        <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+          </ol>
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner">
+            <div class="item active">
+              <img src="assetss/img/carousel1.jpg" alt="">
+              <div class="carousel-caption">
+              </div>
+            </div>
+            <div class="item">
+              <img src="assetss/img/carousel2.jpg" alt="">
+              <div class="carousel-caption">
+              </div>
+            </div>
+            <div class="item">
+              <img src="assetss/img/carousel3.jpg" alt="">
+              <div class="carousel-caption">
+              </div>
+            </div>
+          </div>
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+          </a>
+        </div>
+      </div>
+    </div><!-- End Slide gallery -->
+  </div>
+
+  <!-- Konten -->
+  <div class="container thumbs" id="content-container">
+  </div>
+  <template id="content-template">
+    <div class="col-sm-6 col-md-4">
+      <div class="thumbnail">
+        <img src="" alt="" class="img-responsive">
+        <div class="caption">
+          <h3></h3>
+          <p></p>
+          <div class="btn-toolbar text-center">
+            <a href="#" role="button" class="btn btn-primary pull-right">Details</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </template>
+
+  <!-- Footer -->
+  <div class="footer text-center">
+    <p>&copy; 2024 SiBali. All Rights Reserved. Proudly created by Raka & Andika</a>
+    </p>
+  </div>
+
+  <script src="./assetss/js/login.js"></script>
+  <script src="./assetss/js/home.js"></script>
+  <script src="assetss/js/jquery.js"></script>
+  <script src="assetss/js/bootstrap.min.js"></script>
+  <script src="assetss/js/bootshape.js"></script>
+</body>
+
+</html>
