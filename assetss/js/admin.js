@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 const kontenBody = document.getElementById('kontenBody');
                 kontenBody.innerHTML = '';
                 data.forEach(konten => {
-                    const localImagePath = `E:/KULIAH UNDIKSHA/Semester 4/SisBus/API_Sistem-Tersdistribusi/storage/app/${konten.gambar_konten}`;
+                    const localImagePath = `E:/KULIAH UNDIKSHA/Semester 4/SisBus/API_Sistem-Tersdistribusi-master/storage/app/${konten.gambar_konten}`;
                     const tr = document.createElement('tr');
                     tr.classList.add('text-gray-700', 'dark:text-gray-400');
                     tr.innerHTML = `
@@ -46,9 +46,10 @@ document.addEventListener('DOMContentLoaded', function () {
                                 ${konten.kategori_konten}
                             </span>
                         </td>
-                        <td class="px-4 py-3 text-sm">
-                            <img class="object-cover w-20 h-20" src="${localImagePath}" alt="" loading="lazy" />
-                        </td>
+                     <td class="px-4 py-3 text-sm" style="padding: 4px 16px; font-size: 14px;">
+    <img src="${localImagePath}" alt="" style="object-fit: cover; width: 40px; height: 40px;" loading="lazy" />
+</td>
+
                         <td class="px-4 py-3">
                             <div class="flex items-center space-x-4 text-sm">
                               

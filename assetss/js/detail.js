@@ -41,10 +41,11 @@ function fetchContentDetail(contentId) {
       return response.json();
     })
     .then(item => {
+      const localImagePath = `E:/KULIAH UNDIKSHA/Semester 4/SisBus/API_Sistem-Tersdistribusi-master/storage/app/${item.gambar_konten}`;
       console.log('Content Detail:', item);
       detailContainer.innerHTML = `
         <div class="thumbnail">
-          <img src="${item.gambar_konten}" alt="" class="img-responsive">
+          <img src="${localImagePath}" alt="" class="img-responsive">
           <div class="caption">
             <h3>${item.title}</h3>
             <p>${item.deskripsi}</p>

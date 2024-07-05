@@ -17,10 +17,13 @@ function fetchWithAuthorization(url) {
 
 function addItemToContainer(item, category) {
   const templateClone = contentTemplate.content.cloneNode(true);
-  templateClone.querySelector('img').src = item.gambar_konten;
+  const imageElement = templateClone.querySelector('img');
+  imageElement.src = `E:/KULIAH UNDIKSHA/Semester 4/SisBus/API_Sistem-Tersdistribusi-master/storage/app/${item.gambar_konten}`;
+  imageElement.alt = item.title; // Set alt attribute for accessibility
+
   templateClone.querySelector('h3').textContent = item.title;
   templateClone.querySelector('p').textContent = item.deskripsi;
-  templateClone.querySelector('a').href = `detail.html?id=${item.id_konten}`; // You can update this to the item's details URL
+  templateClone.querySelector('a').href = `detail.html?id=${item.id_konten}`; // Update URL to item's details page
 
   const categoryContainer = document.getElementById(category + '-container');
   if (!categoryContainer) {
@@ -34,6 +37,7 @@ function addItemToContainer(item, category) {
     categoryContainer.appendChild(templateClone);
   }
 }
+
 
 if (isLoggedIn()) {
   fetchWithAuthorization('http://127.0.0.1:8000/api/konten')

@@ -60,8 +60,15 @@ function login(event) {
             if (data.status === 'Login successfully') {
                 console.log('Success:', data);
                 localStorage.setItem('access_token', data.access_token);
-                alert('Login successful!');
-                window.location.href = 'index.html'; 
+
+                // Check user category and redirect accordingly
+                if (data.category === 'admin') {
+                    alert('Admin login successful!');
+                    window.location.href = 'admin.html'; // Redirect to admin page
+                } else {
+                    alert('User login successful!');
+                    window.location.href = 'index.html'; // Redirect to user page
+                }
             } else {
                 console.error('Error:', data);
                 alert('Login failed. Please check your credentials.');
